@@ -39,7 +39,6 @@ import com.waz.zclient.tracking.{AddPhotoOnRegistrationEvent, GlobalTrackingCont
 import com.waz.zclient.{Injectable, Injector}
 
 import scala.concurrent.Future
-import scala.util.Random
 
 class AppEntryController(implicit inj: Injector, eventContext: EventContext) extends Injectable {
 
@@ -357,7 +356,7 @@ class AppEntryController(implicit inj: Injector, eventContext: EventContext) ext
       .collect { case Some(acc) => acc }
       .flatMap(_.updateHandle(Handle(username)))
 
-  var termsOfUseAB: Boolean = true //Random.nextBoolean()
+  var termsOfUseAB: Boolean = true
 
 }
 
