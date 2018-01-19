@@ -108,7 +108,8 @@ class IntegrationDetailsFragment extends FragmentHelper with OnBackPressedListen
 
   integration.map(_.assets.headOption).onUi {
     case Some(asset) =>
-      pictureAssetId ! asset.id // TODO: check the asset type for the profile pic
+      verbose(s"picture asset id: ${asset.id}")
+     // pictureAssetId ! asset.id // TODO: check the asset type for the profile pic
       pictureView.setImageDrawable(drawable)
     case None =>
 

@@ -116,7 +116,7 @@ public class TestParticipantChatheadAdapter {
         Assert.assertNull(adapter.getItem(pos));
         // separator
         pos++;
-        Assert.assertEquals(ParticipantsChatheadAdapter.VIEW_TYPE_SEPARATOR, adapter.getItemViewType(pos));
+        Assert.assertEquals(ParticipantsChatheadAdapter.VIEW_TYPE_SEPARATOR_VERIFIED, adapter.getItemViewType(pos));
         Assert.assertNull(adapter.getItem(pos));
         // separator - empty
         pos++;
@@ -224,7 +224,7 @@ public class TestParticipantChatheadAdapter {
 
         int pos = 0;
         // separator
-        Assert.assertEquals(ParticipantsChatheadAdapter.VIEW_TYPE_SEPARATOR, adapter.getItemViewType(pos));
+        Assert.assertEquals(ParticipantsChatheadAdapter.VIEW_TYPE_SEPARATOR_VERIFIED, adapter.getItemViewType(pos));
         Assert.assertNull(adapter.getItem(pos));
         // separator - empty
         pos++;

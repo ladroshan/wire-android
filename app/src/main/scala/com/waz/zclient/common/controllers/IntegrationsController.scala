@@ -18,6 +18,7 @@
 package com.waz.zclient.common.controllers
 
 import android.content.Context
+import com.waz.api.impl.ErrorResponse
 import com.waz.model.{ConvId, IntegrationData, IntegrationId, ProviderId}
 import com.waz.service.ZMessaging
 import com.waz.threading.Threading
@@ -42,7 +43,10 @@ class IntegrationsController(implicit injector: Injector, context: Context) exte
   def getIntegration(pId: ProviderId, iId: IntegrationId): Future[IntegrationData] =
     integrations.head.flatMap(_.getIntegration(pId, iId))
 
-  def addBot(cId: ConvId, pId: ProviderId, iId: IntegrationId): Future[Unit] =
-    integrations.head.flatMap(_.addBot(cId, pId, iId))
+  def addBot(cId: ConvId, pId: ProviderId, iId: IntegrationId): Future[Either[ErrorResponse, Unit]] = for {
+    ints <- integrations.head
+    result <- ints.addBotToConversation(cId, pId, iId)
+  } yield result
+
 }
 
