@@ -502,8 +502,6 @@
     <string name="pref_options_contacts_summary">This helps you connect with others. We anonymize all the information and do not share it with anyone else.</string>
     <string name="pref_options_vbr_title">Variable Bit Rate Encoding</string>
     <string name="pref_options_vbr_summary">This makes audio calls use less data and work better on slower networks. Turn off to use Constant Bitrate Encoding.</string>
-    <!--TODO use old vbr summary string when avs is fixed-->
-    <string name="pref_options_vbr_summary_temp_disabled">Constant bit rate calls have been temporarily disabled with the introduction of multiple account support. CBR calls will be back soon.</string>
     <string name="pref_options_alerts_category_title">Alerts</string>
     <string name="pref_options_calls_category_title">Calls</string>
     <string name="pref_options_sounds_title">Sounds</string>
@@ -576,9 +574,7 @@
     <string name="pref_about_website_title">Wire website</string>
     <string name="pref_about_website_url">https://wire.com</string>
     <string name="pref_about_tos_title">Terms of Use</string>
-    <string name="pref_about_tos_url">@string/url_terms_of_service</string>
     <string name="pref_about_privacy_policy_title">Privacy Policy</string>
-    <string name="pref_about_privacy_policy_url">@string/url_privacy_policy</string>
     <string name="pref_about_licenses_title">License information</string>
     <string name="pref_about_licenses_url">@string/url_third_party_licences</string>
     <string name="pref_about_version_title">Version %s</string>
@@ -623,19 +619,6 @@
     <string name="pref__account_action__dialog__change_username__title">Username</string>
     <string name="pref__account_action__dialog__change_username__error_already_taken">Already taken</string>
     <string name="pref__account_action__dialog__change_username__error_unknown">Connection error, please try again</string>
-
-    <!-- URLs -->
-    <string name="url_home">https://wire.com</string>
-    <string name="url_terms_of_service">https://wire.com/legal/terms/embed/</string>
-    <string name="url_privacy_policy">https://wire.com/legal/privacy/embed/</string>
-    <string name="url__help">https://support.wire.com</string>
-    <string name="url_password_reset">https://account.wire.com/forgot/</string>
-    <string name="url_third_party_licences">https://wire.com/legal/#licenses</string>
-    <string name="url_otr_learn_why">https://wire.com/privacy/why</string>
-    <string name="url_otr_learn_how">https://wire.com/privacy/how</string>
-    <string name="url_otr_decryption_error_1">https://wire.com/privacy/error-1</string>
-    <string name="url_otr_decryption_error_2">https://wire.com/privacy/error-2</string>
-    <string name="url_about_teams">https://wire.com/en/create-team/#features</string>
 
     <!-- No Internet connection -->
     <string name="system_status__no_internet">NO INTERNET</string>
@@ -1271,4 +1254,24 @@
 
     <string name="app_entry_email_sent">Email sent</string>
     <string name="teams_set_username_subtitle">Usernames help people find you.</string>
+
+    <string name="pick_user_teams_invite">Invite people to join the team</string>
+    <string name="teams_invitations_skip">SKIP</string>
+    <string name="teams_invitations_done">DONE</string>
+
+    <string name="teams_invitations_error_too_many">The maximum number of invitations has been sent</string>
+    <string name="teams_invitations_error_blacklisted_email">The given e-mail address has been blacklisted due to a permanent bounce or a complaint.</string>
+    <string name="teams_invitations_error_no_identity">The user has no verified identity (email or phone number).</string>
+    <string name="teams_invitations_error_no_email">This operation requires the user to have a verified email address.</string>
+    <string name="teams_invitations_error_already_sent">Already sent</string>
+    <string name="teams_invitations_error_generic">Something went wrong, please try again</string>
+
+    <string name="teams_invite_email_hint">COLLEAGUE@YOURCOMPANY.COM</string>
+    <string name="teams_invitations_error_invalid_email">PLEASE ENTER A VALID EMAIL ADDRESS</string>
+    <string name="teams_invitations_error_email_exists">THIS EMAIL ADDRESS IS ALREADY IN USE</string>
+    <string name="teams_invitations_error_email_exists_more">LEARN MORE</string>
+    <string name="teams_invitations_error_no_internet">NO INTERNET CONNECTION</string>
+    <string name="team_invitation_add_from_address_book">ADD FROM ADDRESSBOOK</string>
+    <string name="invitation_screen_title">Build your team</string>
+    <string name="invitation_screen_subtitle">Invite your colleagues to join.</string>
 </resources>

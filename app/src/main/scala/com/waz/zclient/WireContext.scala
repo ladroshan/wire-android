@@ -18,7 +18,7 @@
 package com.waz.zclient
 
 import android.annotation.SuppressLint
-import android.app.{Activity, Dialog, Service}
+import android.app.{Dialog, Service}
 import android.content.{Context, ContextWrapper, DialogInterface}
 import android.support.v4.app.{Fragment, FragmentActivity}
 import android.support.v7.app.AppCompatActivity
@@ -227,6 +227,8 @@ class ViewHolder[T <: View](id: Int, finder: ViewFinder) {
   def get: T = view.getOrElse { returning(finder.findById[T](id)) { t => view = Some(t) } }
 
   def clear() = view = Option.empty
+
+  def foreach(f: T => Unit): Unit = Option(get).foreach(f)
 }
 
 trait PreferenceHelper extends Preference with Injectable with EventContext {
